@@ -70,7 +70,7 @@ static int __init mymodule_init (void)
 
         error = sysfs_create_file(example_kobject, &foo_attribute.attr);
         if (error) {
-                printk(KERN_INFO "failed to create the foo file in /sys/kernel/my_kobject\n");
+                printk(KERN_INFO "Failed to create the foo file in /sys/kernel/my_kobject\n");
         }
 	
         return error;
