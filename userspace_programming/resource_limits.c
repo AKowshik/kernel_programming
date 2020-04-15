@@ -23,6 +23,7 @@ void display_limits(int resource)
 
 int set_limits(int resource, unsigned long soft_limit, unsigned long hard_limit)
 {
+
 	struct rlimit new_limit;
 	new_limit.rlim_cur = soft_limit;
 	new_limit.rlim_max = hard_limit;
@@ -42,6 +43,7 @@ int set_limits(int resource, unsigned long soft_limit, unsigned long hard_limit)
 
 unsigned long get_hard_limit(int resource)
 {
+
 	struct rlimit limit;
 	unsigned long hard_limit;
 	if(getrlimit(resource, &limit) == 0)
